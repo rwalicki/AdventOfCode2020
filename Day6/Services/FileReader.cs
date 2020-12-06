@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Day6.Services
+namespace AdventOfCode2020.Services
 {
     public class FileReader
     {

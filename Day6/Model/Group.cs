@@ -1,4 +1,4 @@
-﻿namespace Day6.Model
+﻿namespace AdventOfCode2020.Model
 {
     public class Group
     {

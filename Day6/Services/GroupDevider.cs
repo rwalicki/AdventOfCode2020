@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Day6.Model;
+using AdventOfCode2020.Model;
 using System.Linq;
 
-namespace Day6.Services
+namespace AdventOfCode2020.Services
 {
     public class GroupDevider
     {

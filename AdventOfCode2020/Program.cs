@@ -1,7 +1,7 @@
 ﻿using AdventOfCode2020.Services;
 using System;
 
-namespace Day6
+namespace AdventOfCode2020
 {
     class Program
     {

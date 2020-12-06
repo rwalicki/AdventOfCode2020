@@ -1,5 +1,4 @@
 ﻿using AdventOfCode2020.Helpers;
-using System;
 
 namespace AdventOfCode2020.Services
 {
@@ -17,7 +16,7 @@ namespace AdventOfCode2020.Services
         public void Start(string inputText)
         {
             var day = _dayObtainerService.TransformToDaysEnum(inputText);
-            if(day == Enums.Days.Unknown)
+            if (day == Enums.Days.Unknown)
             {
                 CloseRequest = true;
             }
