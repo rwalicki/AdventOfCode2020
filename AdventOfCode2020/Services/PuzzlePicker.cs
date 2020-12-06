@@ -16,9 +16,15 @@ namespace AdventOfCode2020.Services
         public void Start(string inputText)
         {
             var day = _dayObtainerService.TransformToDaysEnum(inputText);
-            if (day == Enums.Days.Unknown)
+            switch (day)
             {
-                CloseRequest = true;
+                case Enums.Days.Day6:
+                    var puzzleService = new Puzzles.Day6.Services.PuzzleService();
+                    puzzleService.Start();
+                    break;
+                case Enums.Days.Unknown:
+                    CloseRequest = true;
+                    break;
             }
         }
     }

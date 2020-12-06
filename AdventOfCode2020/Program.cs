@@ -16,6 +16,7 @@ namespace AdventOfCode2020
                 Console.Write("Choose day (1-24): ");
                 var day = Console.ReadLine();
                 service.Start(day);
+                Console.ReadLine();
             }
             Console.WriteLine("*** End ***");
             Console.Read();
