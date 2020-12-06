@@ -1,6 +1,4 @@
-﻿using AdventOfCode2020.Helpers;
-
-namespace AdventOfCode2020.Services
+﻿namespace AdventOfCode2020.Services
 {
     public class PuzzlePicker
     {
@@ -18,9 +16,17 @@ namespace AdventOfCode2020.Services
             var day = _dayObtainerService.TransformToDaysEnum(inputText);
             switch (day)
             {
+                case Enums.Days.Day1:
+                    var puzzleServiceDay1 = new Puzzles.Day1.Services.PuzzleService();
+                    puzzleServiceDay1.Start();
+                    break;
+                case Enums.Days.Day2:
+                    var puzzleServiceDay2 = new Puzzles.Day2.Services.PuzzleService();
+                    puzzleServiceDay2.Start();
+                    break;
                 case Enums.Days.Day6:
-                    var puzzleService = new Puzzles.Day6.Services.PuzzleService();
-                    puzzleService.Start();
+                    var puzzleServiceDay6 = new Puzzles.Day6.Services.PuzzleService();
+                    puzzleServiceDay6.Start();
                     break;
                 case Enums.Days.Unknown:
                     CloseRequest = true;

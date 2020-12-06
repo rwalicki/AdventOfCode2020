@@ -3,7 +3,7 @@ using System;
 
 namespace AdventOfCode2020.Puzzles.Day6.Services
 {
-    public class PuzzleService
+    public class PuzzleService : IPuzzleService
     {
         private FileReader _fileReader;
         private GroupDevider _groupDevider;
@@ -16,7 +16,7 @@ namespace AdventOfCode2020.Puzzles.Day6.Services
 
         public void Start()
         {
-            var text = _fileReader.ReadFileToPlainText(@"C:\downloads\input.txt");
+            var text = _fileReader.ReadFileToPlainText(Environment.CurrentDirectory + @"\..\..\..\Inputs\input6.txt");
             var list = _fileReader.ReadTextToList(text);
             var sortedList = _groupDevider.DevideByReturnSymbol(list);
             var sortedByGroupsPart1 = _groupDevider.CreateGroups(sortedList);

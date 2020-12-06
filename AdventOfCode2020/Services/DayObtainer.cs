@@ -1,7 +1,7 @@
 ﻿using AdventOfCode2020.Enums;
 using System;
 
-namespace AdventOfCode2020.Helpers
+namespace AdventOfCode2020.Services
 {
     public class DayObtainer : IDayObtainer
     {
