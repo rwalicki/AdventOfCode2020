@@ -43,7 +43,10 @@ namespace AdventOfCode2020.Puzzles.Day2.Services
             var positionOneSignPresence = int.Parse(signPolicy.Split("-")[0]);
             var positionTwoSignPresence = int.Parse(signPolicy.Split("-")[1]);
 
-            return password.ToList()[positionOneSignPresence - 1].ToString() == sign || password.ToList()[positionTwoSignPresence - 1].ToString() == sign;
+            var res1 = password.ToList()[positionOneSignPresence - 1].ToString() == sign;
+            var res2 = password.ToList()[positionTwoSignPresence - 1].ToString() == sign;
+
+            return res1 ^ res2;
         }
     }
 }
