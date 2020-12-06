@@ -19,9 +19,11 @@ namespace AdventOfCode2020.Puzzles.Day2.Services
             var text = _fileReader.ReadFileToPlainText(Environment.CurrentDirectory + @"\..\..\..\Inputs\input2.txt");
             var list = _fileReader.ReadTextToList(text);
 
-            var result = _validator.GetValidPasswords(list);
+            var resultPart1 = _validator.GetValidPasswordsOldJobPolicy(list);
+            var resultPart2 = _validator.GetValidPasswordsNewJobPolicy(list);
 
-            Console.WriteLine($"Part1 (ValidPasswords): {result}");
+            Console.WriteLine($"Part1 (ValidPasswords): {resultPart1}");
+            Console.WriteLine($"Part2 (ValidPasswords): {resultPart2}");
             //Console.WriteLine($"Part1 (multiply): {resultPart1.Item1 * resultPart1.Item2}");
             //Console.WriteLine(string.Empty);
             //Console.WriteLine($"Part2 (numbers): {resultPart2.Item1} {resultPart2.Item2} {resultPart2.Item3}");
