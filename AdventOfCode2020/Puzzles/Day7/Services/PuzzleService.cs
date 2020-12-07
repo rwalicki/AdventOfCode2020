@@ -19,10 +19,13 @@ namespace AdventOfCode2020.Puzzles.Day7.Services
             var text = _fileReader.ReadFileToPlainText(Environment.CurrentDirectory + @"\..\..\..\Inputs\input7.txt");
             var list = _fileReader.ReadTextToList(text);
 
-            var bagList = _bagDevider.CreateListOfBags(list);
-
-            //Console.WriteLine($"Part1: {sum1}");
-            //Console.WriteLine($"Part2: {sum2}");
+            var bagMapRules = _bagDevider.CreateMapListOfBags(list);
+            var bagList = _bagDevider.CreateBagList(bagMapRules);
+            var useFullBagList = _bagDevider.BanShinyGoldBag(bagList);
+            var result = _bagDevider.ShinyGoldPossibleContainerCount(useFullBagList);
+            var result2 = _bagDevider.GetInnerBagsCount("shiny gold", bagMapRules);
+            Console.WriteLine($"Part1: {result}");
+            Console.WriteLine($"Part2: {result2}");
             Console.WriteLine($"Press key to continue...");
         }
     }

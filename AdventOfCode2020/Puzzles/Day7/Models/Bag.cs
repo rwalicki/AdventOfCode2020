@@ -4,13 +4,12 @@ namespace AdventOfCode2020.Puzzles.Day7.Models
 {
     public class Bag
     {
-        private readonly string _name;
-        private readonly Dictionary<string, int> _bagsContainer;
+        public string Name { get; set; }
+        public List<Bag> List { get; set; }
 
-        public Bag(string name, Dictionary<string, int> bagsContainer)
+        public Bag()
         {
-            _name = name;
-            _bagsContainer = bagsContainer;
+            List = new List<Bag>();
         }
     }
 }
