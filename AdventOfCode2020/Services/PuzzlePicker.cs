@@ -32,6 +32,10 @@
                     var puzzleServiceDay7 = new Puzzles.Day7.Services.PuzzleService();
                     puzzleServiceDay7.Start();
                     break;
+                case Enums.Days.Day8:
+                    var puzzleServiceDay8 = new Puzzles.Day8.Services.PuzzleService();
+                    puzzleServiceDay8.Start();
+                    break;
                 case Enums.Days.Unknown:
                     CloseRequest = true;
                     break;
