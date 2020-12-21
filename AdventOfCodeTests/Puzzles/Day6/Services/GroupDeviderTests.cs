@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Day6Tests.Puzzles.Day6.Services
+namespace AdventOfCodeTests.Puzzles.Day6.Services
 {
     [TestFixture]
     public class GroupDeviderTests

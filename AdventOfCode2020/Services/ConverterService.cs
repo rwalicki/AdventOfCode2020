@@ -10,5 +10,11 @@ namespace AdventOfCode2020.Services
             list.RemoveAll(x=>string.IsNullOrEmpty(x));
             return list.Select(x => int.Parse(x)).ToList();
         }
+
+        public List<double> ConvertToDouble(List<string> list)
+        {
+            list.RemoveAll(x => string.IsNullOrEmpty(x));
+            return list.Select(x => double.Parse(x)).ToList();
+        }
     }
 }

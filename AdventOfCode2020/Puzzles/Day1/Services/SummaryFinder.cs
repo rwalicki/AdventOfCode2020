@@ -30,6 +30,21 @@ namespace AdventOfCode2020.Puzzles.Day1.Services
             return (0, 0);
         }
 
+        public (double, double) FindAnySumOfTwoNumbers(List<double> list, double findingSummary)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = i + 1; j < list.Count; j++)
+                {
+                    if (list[i] + list[j] == findingSummary)
+                    {
+                        return (list[i], list[j]);
+                    }
+                }
+            }
+            return (-1, -1);
+        }
+
         public (int, int, int) Find2020SumOfThreeNumbers(List<string> list)
         {
             var convertedList = _converter.ConvertToInt(list);

@@ -1,7 +1,7 @@
 ﻿using AdventOfCode2020.Services;
 using NUnit.Framework;
 
-namespace Day6Tests.Services
+namespace AdventOfCodeTests.Services
 {
     [TestFixture]
     public class FileReaderTests
