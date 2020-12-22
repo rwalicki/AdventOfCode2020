@@ -63,5 +63,29 @@ namespace AdventOfCode2020.Puzzles.Day1.Services
             }
             return (0, 0, 0);
         }
+
+        public List<double> FindContiguousSet(List<double> list, double result)
+        {
+            var sum = 0d;
+            var returnList = new List<int>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                returnList.Clear();
+                returnList.Add(i);
+                sum = list[i];
+                for (int j = i + 1; j < list.Count; j++)
+                {
+                    sum += list[j];
+                    returnList.Add(j);
+                    if (sum == result)
+                    {
+                        var findingData = new List<double>();
+                        returnList.ForEach(x => findingData.Add(list[x]));
+                        return findingData;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

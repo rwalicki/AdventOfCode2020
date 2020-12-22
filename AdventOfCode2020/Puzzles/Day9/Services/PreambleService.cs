@@ -63,5 +63,22 @@ namespace AdventOfCode2020.Puzzles.Day9.Services
             }
             return null;
         }
+
+        public double FindContiguousSetResult(List<double> xmasData, double result)
+        {
+            var foundXmasData = _summaryFinder.FindContiguousSet(xmasData, result);
+            var min = foundXmasData.Min();
+            var max = foundXmasData.Max();
+            return min + max;
+        }
+
+        public double FindContiguousSetResult(List<string> dataList, double result)
+        {
+            var xmasData = _converterService.ConvertToDouble(dataList);
+            var foundXmasData = _summaryFinder.FindContiguousSet(xmasData, result);
+            var min = foundXmasData.Min();
+            var max = foundXmasData.Max();
+            return min + max;
+        }
     }
 }

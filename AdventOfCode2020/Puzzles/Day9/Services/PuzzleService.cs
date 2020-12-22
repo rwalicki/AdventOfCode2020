@@ -20,8 +20,9 @@ namespace AdventOfCode2020.Puzzles.Day9.Services
             var list = _fileReader.ReadTextToList(text);
 
             var result1 = _service.FindInvalidElement(list);
-            
+            var result2 = _service.FindContiguousSetResult(list, result1);
             Console.WriteLine($"Part1: {result1}");
+            Console.WriteLine($"Part1: {result2}");
             Console.WriteLine($"Press key to continue...");
         }
     }
